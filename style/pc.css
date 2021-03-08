@@ -41,7 +41,9 @@
         display: flex;
         justify-content: space-between;
         align-content: center;
-        position: relative;
+        /* position: relative; */
+        position: fixed;
+        width: 100vw;
         z-index: 1000;
     }
 
@@ -121,8 +123,7 @@
     /* 메인 */
 
     main {
-        position: absolute;
-        top: 60px;
+        padding-top: 60px;
         z-index: 200;
     }
 
