@@ -685,6 +685,10 @@ aside .sns{
     justify-content: center;
 }
 
+aside.hidden {
+    visibility: hidden;
+}
+
 aside .sns li{
     background-color: #a79f8c;
     border: none;
