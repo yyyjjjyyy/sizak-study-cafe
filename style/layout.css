@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+/* pc 서식 */
+@media screen and (min-width:1024px) {
+
+	/*	토글버튼 숨기기*/
+	label[for=toggle], i.fa-times, i.fa-angle-down, i.fa-search{display: none;}
+
+	#wrap{
+		margin: 0px auto;
+	}
+	
+	.header_inner{
+		width: 1920px;
+		margin: 0px auto;
+		position: relative;
+	}
+	
+
+			
+	.nav_wrap{
+		position: absolute; 
+		top: 40px;		
+		background-color: rgba(255,255,255,.7);
+		height: 40px;
+		overflow: hidden;
+		display: flex;
+		
+			}
+
+	/*nav_wrap에 마우스 오버시 아래로 높이가 커지면서 서브가 보이게 한다*/
+	.nav_wrap:hover{
+		height: 350px;		
+	}
+		
+	.nav_wrap .logo {
+		width: 150px; height: 40px; line-height: 40px;
+		background-image: url(../img/LOGO-05.png);
+		background-repeat: no-repeat;
+		background-size:contain;
+		background-position: left;
+		text-indent: -1000000px;
+		z-index: 4000;
+		}
+	
+	.nav_wrap .gnb{
+		padding: 10px;		
+		z-index:1000;
+			}
+
+	.nav_wrap .gnb > ul{
+			display: flex;	
+			width: 1200px;
+			}
+	
+	.nav_wrap .gnb > ul > li{
+		width: 171px;		
+		text-align: center;
+				}
+
+	.nav_wrap .gnb > ul > li >a{
+			font-weight: bold;
+			text-decoration: none;
+			line-height: 20px;
+		color: #727272;
+			}
+	
+	
+	.sub{display: block !important;
+			/*모바일서식과 중복서식. 모바일이 우선순위되어 서식이 안먹음. 
+			따라서!important;로 우선순위 바꿔줌.*/
+		}
+
+	.sub a{font-size: 13px !important;}
+
+
+	.nav_wrap .gnb a{color:#7e7e7e;}
+
+
+
+	header .lnb{
+		position: absolute;/*절대배치는 마진0 auto 안먹힘!*/
+		width: 100%; height: 40px;
+		background-color: #7199c2;
+		display: flex;
+		justify-content: flex-end;
+		z-index:1000;
+		}
+
+	header .lnb ul a{color:#fff; }
+
+	header .lnb li{
+		line-height: 40px;
+		padding: 0px 5px;
+		margin: 0px;
+		}
+
+
+	header .lnb li:last-child{
+			border: none;
+			padding-right: 458px;
+			}
+
+	header .lnb li a{padding: 0px 10px;}
+
+
+	/* 메인콘텐츠 서식 */
+	
+	/*그리드*/
+	.grid{width: 1200px;}
+	.grid100{width: 1920px;}
+	.grid, .grid100{
+		margin: 0px auto;
+		display: grid;
+		justify-content: center;
+		grid-gap: 10px;
+		margin-bottom: 40px;
+			}
+
+	/*메인이미지*/
+	.visual{
+		background-color: #7199c2;
+		width: 1920px; height: 700px;
+		overflow: hidden;
+			}
+	
+	.visual h1{}
+	.visual h2{}
+	.visual p{}
+	.visual #reservation{text-align: right;}
+	.visual #reservation>li{display: inline-block;}
+	.visual #reservation>li a img{width: 50px;}
+	
+	/*객실 정보*/
+		.room{			
+		background-color: blueviolet;	
+		grid-template-columns: repeat(3,33.3%);/*repeat(개수, 크기);*/
+				}
+	
+		.item{
+		background-color: rgba(255,255,255,.7);
+		padding: 40px;
+		text-align: center;
+		overflow: hidden;
+			}
+	
+	.room>.item:first-child{grid-area: 1/1/2/4;}
+	.room>.item:nth-child(2){grid-area: 2/1/4/3;}
+	.room>.item:nth-child(3){grid-area: 2/3/4/4;}
+	
+
+	/* 시설 안내 */
+	.space{			
+		background-color:antiquewhite;
+		grid-template-columns: 30% 70%;
+					}
+	
+	/* 레스토랑 */
+	
+	.dining{
+		background-color:#fe8111;
+		grid-template-columns: repeat(4,25%);
+		grid-template-rows: 256px;
+		overflow: hidden;
+			}
+	
+	/*웨딩&이벤트*/
+	.wedding{background-color:beige; grid-template-columns: 1200px;}
+	
+	/*sns*/
+	.sns{
+		background-color: #7199c2;
+	grid-template-columns: repeat(5,20%);}
+	
+	/* 지도 */
+	.map{background-color: #c3e5c3;
+	grid-template-columns: 100%;}
+	
+	.map > .map_tab{
+		display: flex;
+		justify-content: center;
+	}
+
+	
+	.map > .map_tab>li{
+		border: 1px solid #7e7e7e;
+		width: 60px;
+		font-size: 18px;
+		padding: 5px;
+		margin: 5px;
+	}
+	
+	.map > .map_tab>li>a{
+		color:7e7e7e;
+	}
+	
+	.map > .map_tab>li:hover{
+		background-color:#7199c2;
+		border: none;
+		}
+	
+	.map > .map_tab >li>a:hover{
+		color: #ffffff;
+		text-decoration: none;
+		
+	}
+	
+	
+	/* 푸터영역	*/
+	footer{
+		background-color: #727272;
+		width:100%;
+			}
+	
+	footer > #f_grid{
+		width: 1920px; margin: 0px auto;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 10px;
+		justify-content: space-between;
+		}
+	
+
+	footer li {
+		display: inline;
+		line-height: 150%;
+	}
+	
+	.f_lnb > li{
+		border-right: 1px solid #fff;
+		padding:0px 20px;
+			}
+	
+	.f_lnb > li > a{
+		color: #fff;
+		font-size: 14px;
+					}
+	
+	footer .f_lnb li:last-child{border-right:none;}
+	footer .f_lnb li:first-child{padding-left:0px;}
+	
+	footer address{
+		color:#fff;
+		text-align: left; line-height: 20px;
+		padding: 40px 0px;
+			}
+	
+	footer .f_sns{margin-bottom: 13px;}
+	
+	footer .f_sns > li{padding: 0px 8px;}
+	footer .f_sns > li:first-child{padding-left: 0px;}
+	
+	footer .f_sns > li img{width: 45px;}
+	footer #family{text-align: center;}
+	footer #family  select{
+		font-size: 18px;
+		padding: 5px 58px;		
+			}
+	
+	
+	

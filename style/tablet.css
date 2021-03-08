@@ -1,0 +1,124 @@
+@charset "utf-8";
+@import url(//db.onlinewebfonts.com/c/88e77b9b43653c3e36057589ef18d1f1?family=Jost*+400+Book);
+
+
+@font-face {
+	font-family: 'S-CoreDream-3Light';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+/* 태블릿 서식 */
+@media screen and (min-width:768px) and (max-width:1023px) {
+	
+head,main,footer{width:100%;}
+
+	
+/*	닫기,방향,검색 버튼 숨기기*/
+i.fa-times, i.fa-angle-down, i.fa-search{display: none;}
+
+	#wrap{
+		grid-auto-rows: 108px auto auto auto auto;		
+	}
+	
+	.header_inner{
+		width: 100%;height:108px;
+		position: relative;
+		background-color: #f8f87d;
+			}
+	
+	h1{
+		width:20px;
+		position: absolute; 
+		left:0px; top: 30px;
+		z-index: 4000;
+		}
+			
+	.nav_wrap{
+		width: 100%;
+		position: absolute; 
+		top: 72px;
+		background-color: rgba(255,255,255,.7);
+		height: 36px;
+	/*	overflow: hidden;*/		
+		padding-right: 50px;
+		
+	}
+
+	/*nav_wrap에 토글 클릭 시 아래로 높이가 커지면서 서브가 보이게 한다*/
+	#toggle:checked ~.nav_wrap{
+		height: 250px;
+		top:72px; height: 250px;
+			}
+	
+	#toggle:checked ~.lnb{top:20px;}
+	
+	.nav_wrap .gnb{
+		padding: 0px;
+		width: 100%;
+				}
+
+	.nav_wrap .gnb > ul{
+			display: flex;
+			justify-content: flex-end;/*오른쪽 정렬*/
+			}
+
+	.nav_wrap .gnb > ul > li{
+			position: relative;
+		margin-right: 20px;
+		padding: 0px 10px;
+				}
+
+	.nav_wrap .gnb > ul > li >a{
+			font-weight: bold;
+			text-decoration: none;
+			}
+	
+	
+	
+	
+/* 토글버튼 서식*/
+	label[for=toggle]{
+		position: absolute;
+		right: 60px; top:30px;
+		z-index: 3000;
+	}
+
+	.sub{display: block !important;
+			/*모바일서식과 중복서식. 모바일이 우선순위되어 서식이 안먹음. 
+			따라서!important;로 우선순위 바꿔줌.*/
+		}
+
+	.sub a{font-size: 13px !important;}
+
+	.nav_wrap .gnb a{color:#333;}
+
+
+
+	header .lnb{
+		position: absolute;/*절대배치는 마진0 auto 안먹힘!*/
+		right: 1%;
+		/*마진0 auto 안먹힐 때 left:50%주고 전체크기(1024)의 절반 값(512)만큼 마이너스 값 줘서 정렬 */
+		top: 20px;
+		display: flex;
+		justify-content: flex-end;
+		padding: 0px;
+		}
+
+	header .lnb ul a{color:#333;}
+
+	header .lnb li{
+			border-right: 1px solid #ccc;
+			padding: 0px 6px;
+			margin: 0px;
+		}
+
+
+	header .lnb li:last-child{
+			border: none;
+			padding-right: 20px;
+			}
+
+	header .lnb li a{padding: 0px 8px;}
+	header .lnb ul>li{display: inline;}/*??????*/
+	

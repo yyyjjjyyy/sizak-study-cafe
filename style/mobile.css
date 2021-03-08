@@ -1,0 +1,203 @@
+@charset "utf-8";
+@import url(//db.onlinewebfonts.com/c/88e77b9b43653c3e36057589ef18d1f1?family=Jost*+400+Book);
+
+
+@font-face {
+	font-family: 'S-CoreDream-3Light';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+/* 모바일 서식 */
+@media screen and (max-width:767px) 
+	/* 그리드 
+	#wrap{
+		display: grid;
+		grid-template-columns: auto;/*모바일 열 1개라 의미없음*/
+		grid-template-rows: 90px auto auto;/*헤더 메인 푸터 높이 지정*/
+		grid-row-gap: 10px;
+			}
+	*/
+	
+	header{
+		text-align: center;
+		}
+	
+	header h1 img{
+		height: 80px;
+		padding-top: 5px;
+	}
+	
+	/* 토글 서식*/
+	header i.fa-bars{
+		font-size: 32px;
+		padding:6px;
+		position: absolute;top:23px; left:10px;
+	}
+	
+	/* 검색아이콘 서식*/
+	header i.fa-search{
+			font-size: 30px;
+		padding:6px;
+		position: absolute;top:26px; right:10px;
+	}	
+	
+	/*	내비게이션 서식*/
+	.nav_wrap{
+		z-index: 2000;
+		width: 100%; height: 100%;
+		position: fixed;top:-100%;/* top:0px;: /-100% : 숨기기/ 90px;*/
+		background-color: rgba(0,0,0,.7);
+		transition: 0.3s; /*0.3s 또는 0.4s가 가장 많이 쓰임*/
+	}
+	
+	/* 햄버거 메뉴 클릭시 체크박스가 체크되면서 아래 동생 nav_warp의 위치가 top:0이 되도록*/
+	
+	#toggle:checked ~ .nav_wrap{
+		top: 80px;	}
+#toggle:checked ~ .lnb{top:80px;}
+	
+	/* 닫기버튼 서식*/
+	i.fa-times{
+		position: absolute; 
+		right: 20px; top: 26px;
+		color: #ffffff;
+		font-size: 34px;
+		padding: 10px;
+		
+	}
+	
+	
+	/* 내비_lnb서식*/
+	header .lnb{
+		padding-top: -50px;/* 마이너스로 숨김*/
+		transition: 0.5s;
+		position: absolute;
+		z-index: 3000;
+		width: 100%;
+	}
+	
+	header .lnb ul{
+		display: flex;
+		justify-content: center;
+	}
+	
+	header .lnb li{
+		margin:1%;
+	}
+	
+	header .lnb ul a{
+		color: #ffff00;
+		font-size: 0.8rem; /*  12px*0.8= 약 12.6px */
+		text-transform: uppercase;
+	
+	}
+	
+	
+	/*gnb 서식*/
+	.nav_wrap .gnb{
+	padding: 20px 5% 0px 5%;
+	text-align: left;
+	
+	}
+	
+	.nav_wrap .gnb ul>li{
+		border-bottom: 1px solid #ffffff;
+	}
+	
+	.nav_wrap .gnb a{
+		color: #ffffff;
+		font-size: 1rem;
+		line-height: 40px;
+		display: block;
+	}
+	
+	.nav_wrap .gnb a i.fa-angle-down{
+		float: right; /*화살표 오른쪽 가게 하기 위해 a태그 블록. 플로트*/
+		font-size: 1.2rem;
+		transform: translateY(6px);
+		
+	}
+	
+	.nav_wrap .sub{display: none;}
+	
+	/* 메인화면 서식 */
+	
+	main{
+		display: grid;
+		padding:10px;
+		grid-template-columns: auto;
+		grid-row-gap: 15px;
+		justify-content: center;
+		text-align: center;
+				}
+
+/*스와이퍼 슬라이드 서식*/
+.swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+background: #fff;}
+
+	
+	.new_item, .brand, .ad, .notice{}
+	.new_item img, .brand img, .ad img{max-width: 355px;width: 100%;}
+	
+	
+	/* 뉴스, 공지사항 서식*/
+	
+	article dl{
+		text-align: left;
+		max-width: 375px;
+		margin: 0px auto;
+	}
+	
+	article dl > dt{
+		font-size: 23.5px;
+		font-weight: bold;
+		font-family: "times new roman";
+		text-transform: uppercase;
+		border-bottom: 1px solid #333;
+		padding: 5px 0px;
+	}
+	
+	article > dl > dd{
+		
+		line-height: 34px;
+		overflow: hidden; /*overflow: hidden / text-overflow: ellipsis;/
+		white-space: nowrap;/ */
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	article .plus{
+		float: right;
+		font-size: 12px;
+		border: 1px solid #333;
+		padding: 2px 5px;
+			
+	}
+	
+	.store{
+		background-image: url(../images/mbn04.png);
+			background-repeat:no-repeat;
+		background-size: contain;
+		height: 152px;
+		background-position: center;
+	}
+	
+	.store a{ 
+	display: block;
+		width: 100%; height: 152px;
+		text-indent: -9999px;
+		}
+	
+	
+	/*푸터영역 서식*/
+	
+	
+	
