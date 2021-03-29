@@ -87,19 +87,13 @@
           }
         );
 
-        //            // 서브메뉴 펼침
-        //
-        const gnb = $(".gnb > li");
-
-        gnb.click(function () {
-          $(this).find(".sub").stop().slideToggle("fast");
-          $(this).find("i.fas").toggleClass("act");
-        });
-
         let gnba = $(".gnb > li > a");
-
+        
         gnba.click(function (e) {
-          e.preventDefault(); //#기능 무력화
+            e.preventDefault(); //#기능 무력화
+            $(this).find(".sub").stop().slideToggle("fast");
+            $(this).parent().toggleClass("act");
+            
 
           return false; //#기능 무력화
 
