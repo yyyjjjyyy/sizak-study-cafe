@@ -7,7 +7,7 @@
   /* 토글,아이콘 서식*/
 
   .act > a > i {
-    transform: rotate(180deg) translateX(-10px);
+    transform: rotate(180deg);
   }
 
   i.fa-bars,
