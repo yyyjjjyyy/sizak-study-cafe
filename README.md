@@ -1,1 +1,0 @@
-# sizak-study-cafe

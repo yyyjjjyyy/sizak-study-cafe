@@ -14,13 +14,10 @@ a{text-decoration: none; color: #707070;}
 a:hover{text-decoration: underline;}
 
 header,footer{
-	width: 100%;
-	
+	width: 100%;	
 }
 
 /* 체크박스 숨기기 */
 #toggle{display:none;}
 
-	.swiper-container{
-			width:100%;
-				}
+
