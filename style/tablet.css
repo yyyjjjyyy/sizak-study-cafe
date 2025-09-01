@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
+
+
+@font-face {
+    font-family: 'Cafe24Dangdanghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 태블릿 서식 */
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+
+        너비수정    
+    
+    #nav,
+    header,
+    footer,
+    .swiper-slide,
+    article,
+    #cafe h2,
+    #cafe, 
+    #family {
+        width: 100% !important;
+    }
+
+   
+
+
+    #brand,
+    #cafe {
+        width: 95% !important;
+        margin: 0px auto;
+    }
+
+
+
+    /*    브랜드     */
+
+
+    #brand h1 {
+        width: 100% !important;
+    }
+    #brand ul{margin: 40px 0;}
+    #brand ul li{width: 50%;}
+
+    #brand li img {
+        height: 100%;
+    }
+
+    #brand li h2 {
+        padding-top: 0px;
+    }
+
+    #brand li p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+
+    /*    공간소개    */
+
+    .item_p #page01, .item_p #page02, .item_p #page03{bottom: 12px;}
+    .item_t p {
+        font-size: 14px;
+    }
+
+    .s_wrap {
+        display: flex;
+        flex-direction: column;
+         width: 100%;
+    }
+
+    .s_box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 30px auto;
+        padding: 30px 20px 10px;
+    }
+
+
+    .s_box:nth-last-of-type(2) {
+        flex-direction: row-reverse;
+    }
+
+    .s_box .roomtxt {
+        width: 100%;
+    }
+    .s_box .item_title {margin: -10px -12px;}
+
+    .tablet_room {
+        display: block;
+        padding-top: 30px;
+    }
+
+    .tablet_room p {
+        font-size: 1rem;
+    }
+
+    .tablet_room p.roombtn {
+        font-size: 14px;
+        padding: 4px;
+        width: 25%; 
+        color: #707070;
+        border: 1px solid #726c5e;
+        margin-top: 20px;
+    }
+
+
+    .m_pc_room {
+        display: none;
+    }
+
+    .item_p,
+    .item_title {
+        width: 50%;
+    }
+    .border{width: 50%; background-color: rgb(251, 254, 255);}
+
+    .s_box:hover .border {   
+        background-color: #bcb19be8;
+        color: #fff;
+    }
+
+
+
+
+    /*    카페    */
+    .c_grid {
+        width: 100%;
+    }
+
+    .c_grid {
+        grid-template-columns:  65% 35% !important;
+    }
+}
+
+
+/* 태블릿 헤더, 내비게이션 서식 : mobile.css , pc.css 상단에 중복서식 위치. */
+/* 태블릿 아이콘 (공부의 시작은 시작에서) 서식 : mobile.css , pc.css 하단에 중복서식 위치. */
+
+
